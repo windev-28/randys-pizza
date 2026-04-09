@@ -66,7 +66,9 @@ botonArriba.addEventListener("click", function () {
 // querySelector busca el primer elemento que coincida con el selector CSS
 const formulario = document.querySelector("#comentarios form");
 
-formulario.addEventListener("submit", function (evento) {
+formulario.addEventListener("submit", async function (evento) {
+  
+ 
   // evento.preventDefault() CANCELA el comportamiento por defecto del formulario
   // (que sería abrir el cliente de correo). Así tomamos el control con JS.
   evento.preventDefault();
@@ -81,9 +83,21 @@ formulario.addEventListener("submit", function (evento) {
     return; // "return" detiene la ejecución aquí, no sigue adelante
   }
 
-  // Si todo está bien, mostramos éxito y limpiamos el formulario
+  // Enviamos los datos a Formspree manualmente
+  const respuesta = await fetch("https://formspree.io/f/mreojkev", {
+    method: "post",
+    body: new FormData(formulario),
+    headers: {Accept: "application/json"}
+  });
+
+  if (respuesta.ok) {
+  
+  
   mostrarMensaje("✅ ¡Gracias por tu comentario! Te contactaremos pronto 🍕", "exito");
   formulario.reset(); // limpia todos los campos del formulario
+    } else { 
+      mostrarMensaje(" Hubo un error al enviar. Intenta de nuevo.", "error");
+       }
 });
 
 // Esta es una FUNCIÓN — un bloque de código reutilizable que puedes llamar
