@@ -17,15 +17,50 @@ h1 {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
 }
-
-/* Efecto al pasar el mouse */
 .btn-regresar:hover {
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.35);
   background: linear-gradient(135deg, #00d4ff, #6a5cff);
 }
-
-/* Efecto al hacer clic */
 .btn-regresar:active {
   transform: scale(0.95);
+}
+.productos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+}
+.producto {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 600px;
+}
+.producto img {
+  width: 120px;
+  height: auto;
+}
+.info {
+  flex: 1;
+}
+.detallle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.detallle p {
+  margin: 0;
+  color: #444;
+  font-size: 15px;
+}
+.precio {
+  font-weight: bold;
+  color: #e63946;
 }
