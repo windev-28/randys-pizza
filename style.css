@@ -7,9 +7,9 @@ html, body {
 }
 
 .marquee-container { 
-  width: calc(100% + 6rem);
-  margin-left: -3rem;
-  margin-right: -3rem;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
   overflow: hidden;
   background: #8b0000;
   padding: 15px 0;
@@ -73,9 +73,9 @@ p{
   font-family: 'Times New Roman', Times, serif;  
 }
 .marquee-fotos {
-  width: calc(100% + 6rem);
-  margin-left: -3rem;
-  margin-right: -3rem;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
   overflow: hidden;
   padding: 15px 0;
   background: rgba(0, 0, 0, 0.15);
@@ -265,4 +265,7 @@ footer{
   color: white;
   text-align: top;
   padding: 3rem;
+}
+body {
+  overflow-x: hidden;
 }
