@@ -283,6 +283,44 @@ body {
     font-size: 1rem;
   }
 
+#videos {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#videos h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.grid-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.video-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.video-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 8px;
+}
+
+
+
   footer {
     padding: 1rem;
     font-size: 0.85rem;
