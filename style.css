@@ -209,9 +209,12 @@ p {
 }
 .grid-videos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+    justify-content: center;
     gap: 20px;
     padding: 10px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 .video-card {
     background: #fff;
